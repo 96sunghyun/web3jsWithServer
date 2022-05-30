@@ -46,7 +46,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
 let blockNum = "latest";
 async function getBlock(blockNum) {
   try {
-    const block = await web3.eth.getBlock(blockNum);
+    const block = await web3.eth.getBlock(blockNum, true);
     console.log(block);
     return block;
   } catch (e) {
